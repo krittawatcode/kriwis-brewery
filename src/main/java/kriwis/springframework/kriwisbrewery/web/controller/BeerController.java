@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.UUID;
 
-@Deprecated
 @RestController
 @RequestMapping("/api/v1/beer")
 public class BeerController {
@@ -27,7 +26,7 @@ public class BeerController {
         return new ResponseEntity<>(beerService.getBeerById(beerId), HttpStatus.OK);
     }
 
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity handlePost(@RequestBody BeerDto beerDto){
 
         BeerDto saveDto = beerService.saveNewBeer(beerDto);

@@ -14,7 +14,6 @@ public class BeerServiceV2Impl implements BeerServiceV2 {
     public BeerDtoV2 getBeerById(UUID beerId) {
         return BeerDtoV2.builder().id(UUID.randomUUID())
                 .beerName("Bishop Care")
-                .beerStyle("Pale Ale")
                 .build();
     }
 
